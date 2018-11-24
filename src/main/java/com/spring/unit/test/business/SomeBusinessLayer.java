@@ -8,6 +8,10 @@ public class SomeBusinessLayer {
 
 	private DataService dataService;
 
+	public void setDataService(DataService dataService) {
+		this.dataService = dataService;
+	}
+
 	public int calculateSumOf(int[] numbers) {
 		return Arrays.stream(numbers).sum();
 	}
