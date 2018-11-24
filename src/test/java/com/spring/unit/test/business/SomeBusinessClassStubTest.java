@@ -32,11 +32,11 @@ class StubDataServiceWithOnlyOneNumber implements DataService {
 	}
 	
 }
-public class SomeBusinessLayerStubTest {
+public class SomeBusinessClassStubTest {
 
 	@Test
 	public void calculateSumOfNumbers() {
-		SomeBusinessLayer business = new SomeBusinessLayer();
+		SomeBusinessClass business = new SomeBusinessClass();
 		business.setDataService(new StubDataService());
 		int result = business.calculateSumUsingDataService();
 		int expectedSum = 15;
@@ -45,7 +45,7 @@ public class SomeBusinessLayerStubTest {
 	
 	@Test
 	public void calculateSumOfNumbersWhenThereAreNoNumbers() {
-		SomeBusinessLayer business = new SomeBusinessLayer();
+		SomeBusinessClass business = new SomeBusinessClass();
 		business.setDataService(new StubDataServiceWithNoNumbers());
 		int result = business.calculateSumUsingDataService();
 		int expectedSum = 0;
@@ -54,7 +54,7 @@ public class SomeBusinessLayerStubTest {
 	
 	@Test
 	public void calculateSumOfNumbersWhenThereIsOnlyOneNumber() {
-		SomeBusinessLayer business = new SomeBusinessLayer();
+		SomeBusinessClass business = new SomeBusinessClass();
 		business.setDataService(new StubDataServiceWithOnlyOneNumber());
 		int result = business.calculateSumUsingDataService();
 		int expectedSum = 1;

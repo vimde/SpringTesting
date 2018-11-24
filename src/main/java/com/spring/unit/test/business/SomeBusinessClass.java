@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import com.spring.unit.test.data.DataService;
 
-public class SomeBusinessLayer {
+public class SomeBusinessClass {
 
 	private DataService dataService;
 
