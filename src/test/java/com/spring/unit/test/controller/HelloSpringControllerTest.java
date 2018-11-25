@@ -23,11 +23,14 @@ public class HelloSpringControllerTest {
 	@Test
 	public void shouldReturnHelloSpringWhenHelloSpringEndpointIsAccessed() throws Exception {
 		
+		// Build the request with the endpoint and the content-type that is expected/accepted
 		RequestBuilder request = MockMvcRequestBuilders.get("/hello-spring")
 				.accept(MediaType.APPLICATION_JSON);
 		
+		// Call the endpoint with the request and return the result
 		MvcResult result = mockMvc.perform(request).andReturn();
 		
+		// Assert that the result matches with the expected result
 		assertEquals("Hello Spring", result.getResponse().getContentAsString());
 	}
 }
